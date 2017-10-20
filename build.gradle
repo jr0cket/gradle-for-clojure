@@ -14,3 +14,106 @@
 task generateWrapper(type: Wrapper) {
    gradleVersion = '4.2'
 }
+
+// End of helper tasks
+//////////////////////////////////////////
+
+
+//////////////////////////////////////////
+// Build script - repositories and plugins
+
+buildscript {
+  repositories {
+    // ICG Build Repositories
+    mavenLocal()
+    maven { url "http://nyhublnx3.nam.nsroot.net:8081/nexus/content/repositories/central/"}
+    maven { url "http://nyhublnx3.nam.nsroot.net:8081/nexus/content/repositories/public/"}
+  }
+  dependencies {
+    // Netflix nebular plugin for Clojure projects
+    classpath "com.netflix.nebula:nebula-clojure-plugin:4.3.1"
+  }
+}
+
+// End of build script - repositories and plugins
+//////////////////////////////////////////
+
+
+//////////////////////////////////////////
+// Build configuration
+
+// Use the nebular clojure plugin, making tasks available
+apply plugin: "nebula.clojure"
+
+
+// Define location of source code in Leiningen project
+// sourceSets defines locations of source code
+// when different from the standard maven structure
+
+sourceSets {
+    main {
+        clojure {
+            srcDirs = ["src"]
+        }
+        resources {
+            srcDirs = ["resources"]
+        }
+    }
+    test {
+        clojure {
+            srcDirs = ["test"]
+        }
+    }
+}
+
+
+// project configutations
+
+group = "eu.jr0cket"
+version = "0.1.1"
+clojure.aotCompile = true
+
+
+// Test report configuration
+test.reports.junitXml.destination = file("$buildDir/test-results")
+
+//////////////////////////////////////////
+// Clojure project dependencies
+
+dependencies {
+  compile group: 'org.clojure', name: 'clojure', version: '1.8.0'
+}
+
+
+//////////////////////////////////////////
+// Clojure specific tasks
+
+compileClojure {
+  classpath = project.files(classpath, project.processResources.outputs)
+}
+
+clojureTest {
+  junit = true
+  classpath = project.files(classpath, project.processTestResources.outputs)
+  classpath = project.files(classpath, project.processResources.outputs)
+}
+
+
+// Creating Jar and Uberjar files
+// Specify where to get clojure from, relative to sourceSet
+// Also add manifest entry for main class, so jar can be run with java -jar
+
+jar {
+  from 'src/main/clojure'
+  manifest {
+    attributes 'Main-Class': 'hello_world.core'}
+}
+
+uberjar {
+  from 'src/main/clojure'
+  manifest {
+    attributes 'Main-Class': 'hello_world.core'}
+}
+
+tasks.uberjar.enabled = true
+tasks.uberjar.zip64 = true

@@ -83,6 +83,9 @@ test.reports.junitXml.destination = file("$buildDir/test-results")
 // Clojure project dependencies
 
 repositories {
+  mavenLocal()
+  maven { url "http://nyhublnx3.nam.nsroot.net:8081/nexus/content/repositories/central/"}
+  maven { url "http://nyhublnx3.nam.nsroot.net:8081/nexus/content/repositories/public/"}
   mavenCentral()
 }
 

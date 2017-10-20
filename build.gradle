@@ -1,0 +1,16 @@
+//////////////////////////////////////////
+// Gradle Build file for TeamCity Continuous Integraion
+//
+// Author: John Stevenson
+// Contributors: Matthew Taylor
+//
+//////////////////////////////////////////
+
+//////////////////////////////////////////
+// Gradle helper tasks
+//
+// These are task seperate from the Clojure test & build tasks
+
+task generateWrapper(type: Wrapper) {
+   gradleVersion = '4.2'
+}

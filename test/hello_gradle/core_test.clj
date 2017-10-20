@@ -3,5 +3,5 @@
             [hello-gradle.core :refer :all]))
 
 (deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+  (testing "I am a very simple passing test to see if the test framework is working"
+    (is (= 1 1))))

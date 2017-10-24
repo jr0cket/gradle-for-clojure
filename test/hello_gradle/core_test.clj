@@ -11,6 +11,10 @@
   (testing "I am another simple test to see what test results look like in TeamCity"
     (is (= '(1 2 3 4) [1 2 3 4]))))
 
-(deftest failing-test
+#_(deftest failing-test
   (testing "What does a failing test look like in TeamCity"
     (is (= "I am not a keyword" :i-am-a-keyword))))
+
+(deftest fixed-failing-test
+  (testing "Fixed failing test - add more tests and see the results in TeamCity"
+    (is (= "I am not a keyword" "I am not a keyword"))))

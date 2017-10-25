@@ -18,3 +18,7 @@
 (deftest fixed-failing-test
   (testing "Fixed failing test - add more tests and see the results in TeamCity"
     (is (= "I am not a keyword" "I am not a keyword"))))
+
+(deftest
+  (testing "More tests to evaluate my clojure skills"
+    (is (not (= [1 2 3] {:a 1 :b 2 :c 3})))))

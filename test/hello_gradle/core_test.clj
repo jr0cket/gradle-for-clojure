@@ -22,3 +22,7 @@
 (deftest
   (testing "More tests to evaluate my clojure skills"
     (is (not (= [1 2 3] {:a 1 :b 2 :c 3})))))
+
+(deftest
+  (testing "What else can I test today - a function that does not exist"
+    (is-palendrome "radar") ))

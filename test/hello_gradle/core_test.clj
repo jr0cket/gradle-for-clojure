@@ -23,6 +23,8 @@
   (testing "More tests to evaluate my clojure skills"
     (is (not (= [1 2 3] {:a 1 :b 2 :c 3})))))
 
-#_(deftest
-  (testing "What else can I test today - a function that does not exist"
-    (is-palendrome "radar") ))
+(deftest
+  (testing "What else can I test today - a function that does not exist, thats bad, so here is one that passes"
+    (string? "radar") ))
+
+;; Note: commenting out a test with #_ causes the TeamCity build to fail.  Test with a local Gradle run on your pc.

@@ -29,7 +29,12 @@ buildscript {
     maven { url "http://nyhublnx3.nam.nsroot.net:8081/nexus/content/repositories/central/"}
     maven { url "http://nyhublnx3.nam.nsroot.net:8081/nexus/content/repositories/public/"}
     // Citi EAR - Gradle plugins mirror
-    maven {url "https://www.artifactrepository.citigroup.net/artifactory/list/maven-teamdev/"}
+    maven {url "https://www.artifactrepository.citigroup.net/artifactory/list/maven-teamdev/"
+           credentials {
+                username = props.get("artifactory_user")
+                password = props.get("artifactory_password")
+            }
+    }
 
     // Tel Aviv Lap Artifactory POC instance - Kornitz, Omer
     // https://collaborate.citi.net/message/730562#730562

@@ -29,7 +29,7 @@ buildscript {
     maven { url "http://nyhublnx3.nam.nsroot.net:8081/nexus/content/repositories/central/"}
     maven { url "http://nyhublnx3.nam.nsroot.net:8081/nexus/content/repositories/public/"}
     // Citi EAR - Gradle plugins mirror
-    maven {url 'https://www.artifactrepository.citigroup.net/artifactory/list/maven-teamdev/'}
+    maven {url "https://www.artifactrepository.citigroup.net/artifactory/list/maven-teamdev/"}
   }
   dependencies {
     // Netflix nebular plugin for Clojure projects

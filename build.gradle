@@ -33,7 +33,7 @@ buildscript {
 
     // Tel Aviv Lap Artifactory POC instance - Kornitz, Omer
     // https://collaborate.citi.net/message/730562#730562
-    // maven {url "http://artifactory.nam.nsroot.net/artifactory/plugins-release/"}
+    maven {url "http://artifactory.nam.nsroot.net/artifactory/plugins-release/"}
   }
   dependencies {
     // Netflix nebular plugin for Clojure projects

@@ -31,8 +31,8 @@ buildscript {
     // Citi EAR - Gradle plugins mirror - area51-dev FID credentials
     maven {url "https://www.artifactrepository.citigroup.net/artifactory/list/maven-teamdev/"
            credentials {
-                username = "${project.ext['artifactory.username']}"
-                password = "${project.ext['artifactory.password']}"
+                username = "${artifactoryUsername}"
+                password = "${artifactoryPassword}"
             }
     }
 

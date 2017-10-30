@@ -20,6 +20,7 @@
 
 (deftest
   (testing "What else can I test today - a function that does not exist, thats bad, so here is one that passes"
-    (clojure.string/includes? "radar" "ada") ))
+    (clojure.string/includes? "radar" "ada")
+    (clojure.string/includes? "constituent" "con")))
 
 ;; Note: commenting out a test with #_ causes the TeamCity build to fail.  Test with a local Gradle run on your pc.

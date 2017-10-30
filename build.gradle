@@ -28,11 +28,11 @@ buildscript {
     mavenLocal()
     maven { url "http://nyhublnx3.nam.nsroot.net:8081/nexus/content/repositories/central/"}
     maven { url "http://nyhublnx3.nam.nsroot.net:8081/nexus/content/repositories/public/"}
-    // Citi EAR - Gradle plugins mirror
+    // Citi EAR - Gradle plugins mirror - area51-dev FID credentials
     maven {url "https://www.artifactrepository.citigroup.net/artifactory/list/maven-teamdev/"
            credentials {
-                username = props.get("artifactory_user")
-                password = props.get("artifactory_password")
+                username = ${artifactory_user}
+                password = ${artifactory_password}
             }
     }
 

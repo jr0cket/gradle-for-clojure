@@ -21,3 +21,7 @@
 (deftest
   (testing "triggering of builds in teamcity from bitbucket commits"
     (is (= true true))))
+
+(deftest
+  (testing "needed to enable the VCS trigger, which is still required even though we are pushing from our bitbucket webhoot"
+    (is (= 42 42))))

@@ -19,8 +19,5 @@
     (is (not (= [1 2 3] {:a 1 :b 2 :c 3})))))
 
 (deftest
-  (testing "What else can I test today - a function that does not exist, thats bad, so here is one that passes"
-    (clojure.string/includes? "radar" "ada")
-    (clojure.string/includes? "constituent" "con")))
-
-;; Note: commenting out a test with #_ causes the TeamCity build to fail.  Test with a local Gradle run on your pc.
+  (testing "triggering of builds in teamcity from bitbucket commits"
+    (is (= true true))))

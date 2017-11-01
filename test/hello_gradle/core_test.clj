@@ -25,3 +25,7 @@
 (deftest vcs-trigger-builds-test
   (testing "needed to enable the VCS trigger, which is still required even though we are pushing from our bitbucket webhoot"
     (is (= 42 42))))
+
+(deftest fingers-crossed-test
+  (testing "Is everything all working smoothly now"
+    (is (= "fingers-crossed" "fingers-crossed"))))

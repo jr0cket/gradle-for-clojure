@@ -29,3 +29,7 @@
 (deftest fingers-crossed-test
   (testing "Is everything all working smoothly now"
     (is (= "fingers-crossed" "fingers-crossed"))))
+
+(deftest patients-is-a-virtue-test
+  (testing "patients in waiting for the bitbucket web hook to run is a virtue"
+    (is (not (= "patients" "virtue")))))

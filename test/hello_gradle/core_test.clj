@@ -38,3 +38,6 @@
   (testing "marketplace requests for fid for applications are happy and shiney"
     (is (= 42 (* 24 2)))))
 
+(deftest relieve-at-db-fid-creation-test
+  (testing "marketplace requests for Oracle FID's are full of woe"
+    (is (= 666 (+ 6 60 600)))))

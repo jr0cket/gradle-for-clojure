@@ -33,3 +33,8 @@
 (deftest patients-is-a-virtue-test
   (testing "patients in waiting for the bitbucket web hook to run is a virtue"
     (is (not (= "patients" "virtue")))))
+
+(deftest celebrating-fid-creation-test
+  (testing "marketplace requests for fid for applications are happy and shiney"
+    (is (= 42 (* 24 2)))))
+

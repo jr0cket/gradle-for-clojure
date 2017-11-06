@@ -37,7 +37,7 @@
 
 (deftest celebrating-fid-creation-test
   (testing "marketplace requests for fid for applications are happy and shiney"
-    (is (= 42 (* 24 2)))))
+    (is (= 42 (* 21 2)))))
 
 (deftest relieve-at-db-fid-creation-test
   (testing "marketplace requests for Oracle FID's are full of woe"

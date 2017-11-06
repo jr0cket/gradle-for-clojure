@@ -6,9 +6,10 @@
   (testing "I am a very simple passing test to see if the test framework is working"
     (is (= 1 1))))
 
-(deftest simple-test
+(deftest sequence-comparison
   (testing "I am another simple test to see what test results look like in TeamCity"
-    (is (= '(1 2 3 4) [1 2 3 4]))))
+    (is (= '(1 2 3 4) [1 2 3 4]))
+    (is (not (= '(1 2 3 4) [4 3 2 1])))))
 
 (deftest fixed-failing-test
   (testing "Fixed failing test - add more tests and see the results in TeamCity"

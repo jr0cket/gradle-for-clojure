@@ -42,3 +42,7 @@
 (deftest relieve-at-db-fid-creation-test
   (testing "marketplace requests for Oracle FID's are full of woe"
     (is (= 666 (+ 6 60 600)))))
+
+(deftest happy-to-have-datomic-fid-test
+  (testing "yay, we have a datomic FID and password"
+    (is (= #{1 2 3 4} #{4 3 2 1}))))

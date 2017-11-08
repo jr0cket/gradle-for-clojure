@@ -46,3 +46,7 @@
 (deftest happy-to-have-datomic-fid-test
   (testing "yay, we have a datomic FID and password"
     (is (= #{1 2 3 4} #{4 3 2 1}))))
+
+(deftest warsaw-durables-identified-by-hostname-test
+  (testing "durable names starting with wsw are from the warsaw team"
+    (is (clojure.string/includes? "WSWCMEW33" "WSW") )))

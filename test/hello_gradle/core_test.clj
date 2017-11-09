@@ -53,4 +53,4 @@
 
 (deftest project-management-scope-docs-updated-test
   (testing "added all the changes to the scope document and shared with parishma"
-    (is (= 22/7 (* (/ 22/7) 7)))))
+    (is (= 22/7 (* (/ 22 7) 7)))))

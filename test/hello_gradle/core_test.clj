@@ -50,3 +50,7 @@
 (deftest warsaw-durables-identified-by-hostname-test
   (testing "durable names starting with wsw are from the warsaw team"
     (is (clojure.string/includes? "WSWCMEW33" "WSW") )))
+
+(deftest project-management-scope-docs-updated-test
+  (testing "added all the changes to the scope document and shared with parishma"
+    (is (= 22/7 (* (/ 22/7) 7)))))

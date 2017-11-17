@@ -54,3 +54,7 @@
 (deftest project-management-scope-docs-updated-test
   (testing "added all the changes to the scope document and shared with parishma"
     (is (= 22/7 (/ 22 7)))))
+
+(deftest heart-renching-realisation-your-change-request-has-been-rejected-test
+  (testing "If only I had known..."
+    (is (= 24 (/ 48 2)))))

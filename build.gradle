@@ -2,7 +2,6 @@
 // Gradle Build file for TeamCity Continuous Integraion
 //
 // Author: John Stevenson
-// Contributors: Matthew Taylor
 //
 //////////////////////////////////////////
 
@@ -24,21 +23,15 @@ task generateWrapper(type: Wrapper) {
 
 buildscript {
   repositories {
-    // ICG Build Repositories
-    // mavenLocal()
-    // maven { url "http://nyhublnx3.nam.nsroot.net:8081/nexus/content/repositories/central/"}
-    // maven { url "http://nyhublnx3.nam.nsroot.net:8081/nexus/content/repositories/public/"}
-    // Citi EAR - Gradle plugins mirror - area51-dev FID credentials
-    maven {url "https://www.artifactrepository.citigroup.net/artifactory/list/maven-teamdev/"
+    // mavenLocal(
+    // local artifactory
+    maven {url "https://www.artifactrepository.yourdomain.net/artifactory/list/maven-teamdev/"
            credentials {
                 username = "${artifactoryUsername}"
                 password = "${artifactoryPassword}"
             }
     }
 
-    // Tel Aviv Lap Artifactory POC instance - Kornitz, Omer
-    // https://collaborate.citi.net/message/730562#730562
-    // maven {url "http://artifactory.nam.nsroot.net/artifactory/plugins-release/"}
   }
   dependencies {
     // Netflix nebular plugin for Clojure projects
@@ -92,17 +85,13 @@ test.reports.junitXml.destination = file("$buildDir/test-results")
 // Clojure project dependencies
 
 repositories {
-    maven {url "https://www.artifactrepository.citigroup.net/artifactory/list/maven-teamdev/"
+    maven {url "https://www.artifactrepository.yourdomain.net/artifactory/list/maven-teamdev/"
            credentials {
                 username = "${artifactoryUsername}"
                 password = "${artifactoryPassword}"
             }
     }
 
-  // mavenLocal()
-  // maven { url "http://nyhublnx3.nam.nsroot.net:8081/nexus/content/repositories/central/"}
-  // maven { url "http://nyhublnx3.nam.nsroot.net:8081/nexus/content/repositories/public/"}
-  // mavenCentral()
 }
 
 dependencies {

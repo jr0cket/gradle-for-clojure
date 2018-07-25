@@ -4,8 +4,6 @@ A very simple clojure project to test continuous integration with Gradle and Tea
 
 ## Usage
 
-Detailed instructions of using this project are on the Citi Confluence page:
-https://cedt-confluence.nam.nsroot.net/confluence/display/150744/TeamCity+example+-+Hello+World+project
 
 ## License
 
